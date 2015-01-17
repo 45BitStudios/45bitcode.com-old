@@ -1,0 +1,18 @@
+
+
+#development:
+#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
+#    
+#test:
+#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
+#
+#production:
+#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
+#    
+development:
+  host: localhost
+  database: 45_bit_code
+production:
+  sessions:
+    default:
+      uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'

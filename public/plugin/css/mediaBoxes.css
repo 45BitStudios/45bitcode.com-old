@@ -1,0 +1,629 @@
+
+/* ======================================================= 
+ *
+ *    Media boxes   
+ *    Version: 2.0
+ *    By David Blanco
+ *
+ *    Contact: http://codecanyon.net/user/davidbo90
+ *    Created: March 11, 2014
+ *
+ *    Copyright (c) 2013, David Blanco. All rights reserved.
+ *    Available only in http://codecanyon.net/
+ *    
+ *    ---------------------------------
+ *    CONTENTS
+ *    ---------------------------------
+ *    
+ *    (1) GRAPHIC STYLE (Play around in this section)
+ *
+ *      [1] MEDIA BOX CONTENT
+ *      [2] LOAD MORE
+ *      [3] FILTER BAR
+ *      [4] SEARCH FILTER
+ *      [5] DROP DOWN MENU
+ *      [6] THUMBNAIL OVERLAY EFFECT
+ *      [7] MAGNIFIC POPUP
+ *
+ *    (2) NEEDED STYLE (Don't play here)
+ *
+ *      [1] SETUP
+ *      [2] MEDIA BOX THUMBNAIL
+ *      [3] MEDIA BOX CONTENT
+ *      [4] THUMBNAIL OVERLAY EFFECT
+ *      [5] MAGNIFIC POPUP
+ *    
+ * ======================================================= */
+
+
+  /*body{
+      margin:0;
+      min-height: 1000px;
+      overflow-y: scroll; This is optional, but you need it for a full width gallery 
+   }*/
+
+
+
+/* ********************************************************************
+  (1) GRAPHIC STYLE (Play around in this section)
+********************************************************************* */
+
+
+/* ====================================================================== *
+      [1] MEDIA BOX CONTENT
+ * ====================================================================== */
+  
+  .media-box{ font-size: 13px; }
+  
+.media-box-content{
+    padding: 20px;
+    position: relative;
+    background: #fff;
+   line-height: 20px;
+  }
+
+  .media-box-title{
+    letter-spacing: 0px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #484848;
+    font-size: 16px;
+  }
+  
+  .media-box-year{
+    color: #555;
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .media-box-author{
+    font-size: 12px;
+    margin: 5px 0 15px 0 !important;
+  }
+  
+  .media-box-date{
+    font-size: 12px;
+    line-height: 15px;
+ 	margin-top: 5px;
+  }
+
+  .media-box-text{
+    font-size: 13px;
+    margin: 13px 0px 13px 0 !important;
+    color: #555;
+  }
+
+  .media-box-more a{
+    text-decoration: none !important;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+	font-weight: 700;
+  }
+
+/* ====================================================================== *
+      [2] LOAD MORE
+ * ====================================================================== */
+    
+  .media-boxes-load-more-button{
+    cursor: pointer;
+    width: 130px;
+    text-align: center;
+    color: #222;
+    background-color: #fff;
+    font-size: 14px !important;
+    height: 15px;
+    padding: 15px 5px 0px 5px;
+    margin: 30px auto 0;
+  -webkit-box-sizing: content-box !important;
+       -moz-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+  }
+
+  .media-boxes-no-more-entries{ }
+
+/* ====================================================================== *
+      [3] FILTER BAR
+ * ====================================================================== */
+  
+  .media-boxes-filter{
+  	font-size: 0px;
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .media-boxes-filter li{
+    display: inline-block;
+    line-height: 16px;
+    margin: 0 8px 0 0;
+    padding: 5px 0 5px 0;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+  }
+
+  .media-boxes-filter li:last-child{
+    background: none;
+  }
+
+  .media-boxes-filter li a{
+    display: block;
+    cursor: pointer;
+    color: #676767;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 0px 0px 0;
+    padding: 10px 14px;
+    background-color: white;
+    -webkit-border-radius: 1px;
+       -moz-border-radius: 1px;
+            border-radius: 1px;
+
+    -webkit-transition: background-color .1s;
+       -moz-transition: background-color .1s;
+         -o-transition: background-color .1s;
+        -ms-transition: background-color .1s;
+            transition: background-color .1s;
+
+   border:1px solid #bbb;
+  }
+
+  .media-boxes-filter li a:hover{
+    text-decoration: none; border:1px solid #333;
+    background: #333333;
+    color: #fff;
+  }
+
+  .media-boxes-filter li a.selected{ color: #fff; }
+
+/* ====================================================================== *
+      [5] DROP DOWN MENU
+ * ====================================================================== */
+    
+    .media-boxes-drop-down{
+      width: 140px;
+      position: relative;
+		margin: 5px 0;
+		-webkit-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+           -moz-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+             -o-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+            -ms-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+                box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+    }
+
+    .media-boxes-drop-down-header .fa{
+      float: right;
+    }
+
+    .media-boxes-drop-down-menu {
+      margin: 0;
+      padding: 0;
+      z-index: 99999;
+      position: absolute;
+      width: 100%;
+      display: none;
+
+      -webkit-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+           -moz-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+             -o-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+            -ms-box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+                box-shadow: 0 1px 1px rgba(34,25,25,0.2);
+    }
+
+    .media-boxes-drop-down-menu > li {
+      list-style: none;
+    }
+
+    .media-boxes-drop-down-menu > li:first-child > a{
+      border-top: 1px solid #E9E9E9;
+    }
+
+    .media-boxes-drop-down-menu > li > a, .media-boxes-drop-down-header > a {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 400;    
+  
+      display: block;
+      padding: 10px 14px;
+    
+      text-decoration: none;
+      background-color: white;
+      color: #676767;
+      
+      -webkit-box-sizing:border-box;
+         -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+
+    .media-boxes-drop-down-menu > li > a{
+      color: #999999;
+    }
+
+    .media-boxes-drop-down-menu > li > a:hover, .media-boxes-drop-down-menu > li > a:focus {
+      color: #000;
+    }
+
+    .media-boxes-drop-down-menu > li.selected > a,
+    .media-boxes-drop-down-menu > li > a.selected{
+      color: #fb1953;
+    }
+
+    .media-boxes-drop-down-header > a {
+      background-color: white;
+    }
+
+/* ====================================================================== *
+      [6] THUMBNAIL OVERLAY EFFECT
+ * ====================================================================== */
+
+  .thumbnail-overlay{
+    background: #fff; /* fallback for IE8 */
+    background-color: rgba(0,0,0, .8);
+    color: #484848;
+  }
+
+  /* The style for centering the caption (vertically and horizontally) */
+  .thumbnail-overlay>div.aligment{
+    height: 100%;
+    width: 100%;
+    display: table !important;
+  }
+
+  .thumbnail-overlay>div.aligment>div.aligment{
+    padding: 10px;
+    display: table-cell !important;
+    vertical-align: middle; /* FOR VERTICAL ALIGN */
+    text-align:center; /* FOR HORIZONTAL ALIGN */
+  }
+
+  .overlay-title{
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
+  .overlay-description{
+    font-weight: 400;
+    font-size: 12px;
+    display: block;
+    line-height: 16px;
+  }
+
+  .thumbnail-overlay .fa{
+    font-size: 20px;
+    color:  #bbb!important;
+    text-align: center;
+	display: inline-block;
+    border: 2px solid #bbb;
+    margin: 6px;
+    
+    width: 40px;
+    height: 40px;
+    padding-top: 9px;
+  
+   
+    -webkit-transition: -webkit-transform .2s;
+       -moz-transition:    -moz-transform .2s;
+         -o-transition:      -o-transform .2s;
+        -ms-transition:     -ms-transform .2s;
+            transition:         transform .2s;
+  }
+
+  .fa-film {
+    padding-top:9px !important; 
+}
+  
+  
+  .thumbnail-overlay .fa:hover{
+   border: 2px solid #fff;
+ 	color:  #fff!important;
+    cursor: pointer;
+  }
+
+  .mb-play-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('icons/blank.gif'); /* IE hack, since IE doesn't recognize the hover state in places where there's nothing */
+  }
+
+  .mb-play-container .fa{
+    border: 2px solid #fff;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding-top: 11px;
+    padding-left: 2px;
+  
+    -webkit-border-radius: 50%; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+       -moz-border-radius: 50%; /* Firefox 1-3.6 */
+            border-radius: 50%; /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+
+    -webkit-transition: background-color .2s, -webkit-transform .2s;
+       -moz-transition: background-color .2s,    -moz-transform .2s;
+         -o-transition: background-color .2s,      -o-transform .2s;
+        -ms-transition: background-color .2s,     -ms-transform .2s;
+            transition: background-color .2s,         transform .2s;
+  }
+
+  .mb-play-container:hover .fa{
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);          
+  }
+
+
+/* ====================================================================== *
+      [7] MAGNIFIC POPUP
+ * ====================================================================== */
+
+  .mb-open-popup{
+    cursor: pointer;
+  }
+
+  .mfp-container{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  .mfp-arrow.mfp-arrow:before, 
+  .mfp-arrow.mfp-arrow:after { border:none !important; }
+
+  .mfp-arrow.mfp-arrow-left {
+    background:url('icons/icon-arrow-left.png') 50% 50% no-repeat !important;
+  }
+  
+  .mfp-arrow.mfp-arrow-right {
+    background:url('icons/icon-arrow-right.png') 50% 50% no-repeat !important;
+  }
+  
+  .mfp-close{
+    background:url('icons/icon-close.png') right no-repeat !important;
+  }
+
+   /* Just some example in how to add a loder image (gif) to the popup
+  .mfp-preloader {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    color: transparent;
+    background-image: url('icons/loading-image.gif');
+  }
+  */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ * 
+ *
+ * 
+ * 
+ *  BRIDGE (Unless you know what you are doing don't scroll down) ========>
+ * 
+ *
+ * 
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************************************************
+  (2) NEEDED STYLE (Don't play here)
+********************************************************************* */
+
+
+/* ====================================================================== *
+      [1] SETUP 
+ * ====================================================================== */
+	
+  .media-box {
+    /* Box-model */
+    display: none; /* hidden by default, the plugin will take care of showing it */
+    float: left;
+    /*width: 20%;*/
+  }
+
+  .media-box-hidden, .not-loaded-before-search{
+    display: none; /* hide the hidden boxes */
+  }
+	
+  .media-boxes-container{
+  	margin-right: 0 !important;
+  	margin-bottom: 0 !important;
+  }
+  
+  .media-box-loaded{
+    display: block; /* class to show the boxes once the plugin has been initialized */
+  }
+
+ /* ====================================================================== *
+    [2] MEDIA BOX THUMBNAIL
+ * ====================================================================== */
+
+  .media-box .media-box-image{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Hack to center the image */
+  .media-box-image div[data-width][data-height]{
+    position: relative;
+    overflow: hidden;
+  }
+  .media-box-image div[data-width][data-height] img{
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+  }
+  /* End Hack */
+
+  .media-box .media-box-image img{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  
+  .media-box img{
+    max-width: 100%;
+  }
+  
+  /* Loading and broken thumbnail effects */
+
+  .media-box-image div[data-thumbnail], .media-box-image div[data-popup]{
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .image-with-dimensions{
+    background-color: black;
+    background-image: url('icons/loading-image.gif');
+  }
+
+  .broken-image-here{
+    background-color: #BE3730;
+    background-image: url('icons/broken-image.png');
+  }
+
+  .broken-image-here:not([data-height]){
+    min-height: 150px;
+  }
+/* ====================================================================== *
+    [3] MEDIA BOX CONTENT
+ * ====================================================================== */
+
+  .media-box-container{
+    overflow: hidden;
+  }
+
+
+/* ====================================================================== *
+    [4] THUMBNAIL OVERLAY EFFECT
+ * ====================================================================== */
+
+  .thumbnail-overlay{
+      position: absolute;
+      
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+
+      width: 100%;
+  }
+
+  /* REVEAL EFFECT */
+  .position-reveal-effect .media-box-thumbnail-container{
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+  }
+  
+  .position-reveal-effect .thumbnail-overlay{
+      z-index: 1;
+      position: absolute;
+      left: 0;
+  }
+
+/* ====================================================================== *
+    [5] MAGNIFIC POPUP
+ * ====================================================================== */
+  
+  .mfp-arrow:focus {
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+  }
+
+  .mfp-arrow:hover {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+  }
+
+  /* at start */
+  .my-mfp-slide-bottom .mfp-figure {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+         -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+    
+    -webkit-transform: scale(0.8);
+       -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+         -o-transform: scale(0.8);
+            transform: scale(0.8);
+
+  }
+
+  /* animate in */
+  .my-mfp-slide-bottom.mfp-ready .mfp-figure {
+    opacity: 1;
+    -webkit-transform: scale(1); 
+       -moz-transform: scale(1); 
+        -ms-transform: scale(1); 
+         -o-transform: scale(1); 
+            transform: scale(1); 
+  }
+
+  /* animate out */
+  .my-mfp-slide-bottom.mfp-removing .mfp-figure {
+    opacity: 0;
+    -webkit-transform: scale(0.8); 
+       -moz-transform: scale(0.8); 
+        -ms-transform: scale(0.8); 
+         -o-transform: scale(0.8); 
+            transform: scale(0.8); 
+  }
+
+  /* Dark overlay, start state */
+  .my-mfp-slide-bottom.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out; 
+       -moz-transition: opacity 0.3s ease-out; 
+         -o-transition: opacity 0.3s ease-out; 
+            transition: opacity 0.3s ease-out;
+  }
+  /* animate in */
+  .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+  /* animate out */
+  .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+    opacity: 0;
+  }

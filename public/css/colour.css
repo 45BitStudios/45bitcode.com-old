@@ -1,0 +1,100 @@
+/*  --- COLOUR -- */
+.colour,
+div.tabs ul.nav-tabs li.active a, 
+.panel-heading a:hover, 
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span, 
+.sidebar li a:hover, 
+ul.tags li a:hover,
+.timeline .event:after 
+{ 
+	color:#e84e41!important;
+}
+
+/*  --- BACKGROUND COLOUR -- */
+.colour-bg, 
+.service, 
+.bars-wrapper .progress-bar, 
+div.progressBar, 
+.quote blockquote:after
+ { 
+	background: #e84e41!important;
+}
+
+/*  ---------------------------------------------------------------
+  	OVERLAYS FOR IMAGE BACKGROUNDS
+    --------------------------------------------------------------- */
+
+/*  --- DARK OVERLAY -- */
+#milestones, #charts,  #big_quote, .dark_overlay { box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6); }
+
+/*  ---WHITE OVERLAY -- */
+#video,  #cta { box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.9); }
+
+/*  ---------------------------------------------------------------
+  	BUTTONS
+    --------------------------------------------------------------- */
+
+input.btn,
+.btn-big:hover,
+.btn:hover,
+.btn-big:focus, 
+.btn-big-colour,
+#pricing .btn, 
+#pricing .btn:focus, 
+ #pricing  .btn.inverse:hover,  
+#pricing2 .btn,  
+#pricing2 .btn:focus,  
+#pricing2  .btn.inverse:hover, 
+.btn-med:hover
+{
+	background: #e84e41!important;
+	color: #fff;
+} 
+
+.btn,
+input.btn:hover,
+.btn-big-colour:hover, 
+ #pricing .btn:hover, 
+#pricing .btn:focus, 
+#pricing .btn.inverse,
+#pricing2 .btn.inverse,
+ #pricing2 .btn:hover, 
+#pricing2 .btn:focus,
+.largecolourbtn:hover
+{
+	background: #2e3138!important;
+	color: #fff!important;
+}
+
+::selection { background: #e84e41; color: #fff; }
+::-moz-selection { background: #e84e41; color: #fff; }
+
+.lead a  { color: #e84e41; }
+.lead a:hover{ color:#2e3138; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	WORK PAGES
+/*-----------------------------------------------------------------------------------*/	
+
+.media-boxes-filter li a.selected { background: #e84e41; border:1px solid #e84e41; }
+.media-boxes-filter li a:hover{ border:1px solid #333!important; background: #333!important; color: #fff; }
+.media-box-date, .media-box-more a { color: #e84e41!important;}
+ .media-box-more a:hover{ color: #222!important; }
+
+/***************************************************
+	work2
+ ***************************************************/
+#work2 .media-box-title { color: #f5f5f5!important; }
+#work2 .media-box-more a:hover { color: #bbb!important; }
+
+/***************************************************
+	NEWSLETTER - INDEX 3
+ ***************************************************/
+.cd-form { background: #e84e41; }
+.cd-email:focus { background-color: #2e3138; }
+.cd-submit { background-color:#e84e41; color: white; }	
+.no-touch .cd-submit:hover, .cd-submit:focus { background-color: #3c424f; }
+.cd-response-success { background-color: #2e3138; }
