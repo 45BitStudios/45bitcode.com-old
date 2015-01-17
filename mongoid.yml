@@ -15,4 +15,4 @@ development:
 production:
   sessions:
     default:
-      uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
+      uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/45bit'
