@@ -13,7 +13,14 @@ development:
 	host: localhost
 	database: 45_bit_code
 
-
 production:
-    uri: <%= ENV['MONGOLAB_URI'] %>
+  hosts:
+    - - ds043497.mongolab.com
+      - 43497
+  username: admin
+  password: admin
+  database: 45bit
+  max_retries_on_connection_failure: 20
+  persist_in_safe_mode: true
+  skip_version_check: true
 
