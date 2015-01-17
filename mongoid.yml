@@ -16,7 +16,7 @@ development:
 production:
   sessions:
     default:
-      uri: 'mongodb://admin:admin@ds043497-a.mongolab.com:43497/45bit'
+      uri: <%= ENV['MONGOLAB_URI'] %>
 
       options: 
         # The default consistency is :eventual, which reads from 
