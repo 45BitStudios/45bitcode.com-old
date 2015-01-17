@@ -1,26 +1,8 @@
-
-
-#development:
-#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
-#    
-#test:
-#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
-#
-#production:
-#    uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/localization'
-#    
 development:
-	host: localhost
-	database: 45_bit_code
-
+  sessions:
+    default:
+      uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/45bit'
 production:
-  hosts:
-    - - ds043497.mongolab.com
-      - 43497
-  username: admin
-  password: admin
-  database: 45bit
-  max_retries_on_connection_failure: 20
-  persist_in_safe_mode: true
-  skip_version_check: true
-
+  sessions:
+    default:
+      uri: 'mongodb://admin:admin@ds043497.mongolab.com:43497/45bit'

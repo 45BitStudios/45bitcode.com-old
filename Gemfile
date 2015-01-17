@@ -8,8 +8,8 @@ gem 'httparty'
 #gem 'nokogiri'
 #gem 'savon'
 gem 'awesome_print'
-gem "mongoid", "~> 2.4.6"
-#gem 'mongoid'
+#gem "mongoid", "~> 2.4.6"
+gem 'mongoid'
 gem 'mongo'
 gem 'bson_ext'
 

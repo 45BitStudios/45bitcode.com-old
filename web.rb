@@ -18,11 +18,12 @@ get '/blank?' do
 	app = App.new
 	app.name = params[:new]
 	app.save
+	
   	erb :blank
 end
 
 get '/apps/:name' do
-	@name = ' '
+	@name = ''
 	app = App.where(name: params[:name]).first
 	
 	if app.nil?

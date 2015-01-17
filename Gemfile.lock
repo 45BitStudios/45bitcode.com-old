@@ -50,6 +50,6 @@ DEPENDENCIES
   httparty
   json
   mongo
-  mongoid (~> 2.4.6)
+  mongoid
   sinatra
   unicorn
