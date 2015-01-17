@@ -7,6 +7,7 @@ require 'mongo'
 require 'mongoid'
 require 'json/ext' 
 require './model/apps.rb'
+require './env' if File.exists?('env.rb')
 
 Mongoid.load!('mongoid.yml')
 
