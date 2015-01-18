@@ -20,11 +20,11 @@ def set_defaults
 	@auther_link = 'http://www.twitter.com/vincedavis'
 	@title = '45 Bit Code'
 	@company = '45 Bit Code'
-	@description = 'Making sure all your bits are covered'
+	@description = 'Making great apps 1 bit at a time'
 	@show_app_banner = false
 	@url = 'http://45bitcode.com'
 	@type = 'website'
-	@img_url = 'http://www.45bitcode.com/img/circle.jpg'
+	@img_url = 'http://www.45bitcode.com/img/top/placeit-5.jpg'
 	@fb_id = '575749510'
 	@ios_app_id = '951386307'
 	@tw_card_type = 'summary'
