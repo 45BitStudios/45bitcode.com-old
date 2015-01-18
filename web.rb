@@ -65,6 +65,7 @@ get '/apps/:slug' do
 	if app.nil?
 		status 404
 	else
+		@title = "45 Bit Code | #{app.name}"
 		@name = app.name
 		@description = app.description
 		@show_app_banner = true
