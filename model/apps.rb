@@ -19,6 +19,7 @@ class App
 	field :version, type: String 
 	field :banner, type: String 
 	field :itunes, type: String 
+	field :favicon, type: String 
 
 end
 

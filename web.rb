@@ -7,31 +7,35 @@ require 'mongo'
 require 'mongoid'
 require 'json/ext' 
 require './model/apps.rb'
+require './model/site.rb'
 require './env' if File.exists?('env.rb')
 
 Mongoid.load!('mongoid.yml')
 
 def set_defaults
 
-	@facebook = 'https://www.facebook.com/vince.davis'
-	@twitter = 'http://www.twitter.com/vincedavis'
-	@instagram = 'http://instagram.com/vinceinsanepaint'
-	@author = 'Vince Davis'
-	@auther_link = 'http://www.twitter.com/vincedavis'
-	@title = '45 Bit Code'
-	@company = '45 Bit Code'
-	@description = 'Making great apps 1 bit at a time'
+	site = Site.first
+	
+	@facebook = site.facebook #'https://www.facebook.com/vince.davis'
+	@twitter = site.twitter #'http://www.twitter.com/vincedavis'
+	@instagram = site.instagram #'http://instagram.com/vinceinsanepaint'
+	@author = site.author #'Vince Davis'
+	@auther_link = site.author_link #'http://www.twitter.com/vincedavis'
+	@title = site.link #'45 Bit Code'
+	@company = site.comapny #'45 Bit Code'
+	@description = site.description #'Making great apps 1 bit at a time'
 	@show_app_banner = false
-	@url = 'http://45bitcode.com'
+	@url = site.url #'http://45bitcode.com'
 	@type = 'website'
-	@img_url = 'http://www.45bitcode.com/img/top/placeit-4.jpg'
-	@fb_id = '575749510'
-	@ios_app_id = '951386307'
+	@img_url = site.img_url #'http://www.45bitcode.com/img/top/placeit-4.jpg'
+	@fb_id = site.fb_admin #'575749510'
+	@ios_app_id = ''
 	@tw_card_type = 'summary'
-	@email = 'support@45bitcode.com'
-	@tw_id = '@45bitcode'
-	@phone = '224-294-4567'
-	@city_st_zip = 'Chicago, IL 60606'
+	@email = site.email #'support@45bitcode.com'
+	@tw_id = site.tw_id #'@45bitcode'
+	@phone = site.phone #'224-294-4567'
+	@city_st_zip = site.city_st_zip #'Chicago, IL 60606'
+	@favicon = site.favicon
 end
 
 get '/?' do
@@ -59,8 +63,9 @@ end
 get '/apps/:slug' do
 	set_defaults
 	@name = ''
+	slug = params[:slug]
 	
-	app = App.where(slug: params[:slug]).first
+	app = App.where(slug: slug.downcase).first
 	
 	if app.nil?
 		status 404
@@ -77,6 +82,7 @@ get '/apps/:slug' do
 		@tw_id = app.twitter
 		@banner = app.banner
 		@itunes = app.itunes
+		@favicon = app.favicon
 	end
 	
 	erb :apps

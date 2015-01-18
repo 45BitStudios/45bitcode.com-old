@@ -17,4 +17,11 @@ class Site
 	field :author, type: String 
 	field :phone, type: String
 	field :city_st_zip, type: String 
+	field :author_link, type: String 
+	field :company, type: String 
+	field :img_url, type: String 
+	field :fb_admin, type: String 
+	field :favicon, type: String 
+	field :city_st_zip, type: String 
+	
 end
