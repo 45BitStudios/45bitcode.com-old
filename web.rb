@@ -24,7 +24,7 @@ def set_defaults
 	@show_app_banner = false
 	@url = 'http://45bitcode.com'
 	@type = 'website'
-	@img_url = 'http://www.45bitcode.com/img/top/placeit-5.jpg'
+	@img_url = 'http://www.45bitcode.com/img/top/placeit-4.jpg'
 	@fb_id = '575749510'
 	@ios_app_id = '951386307'
 	@tw_card_type = 'summary'
