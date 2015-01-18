@@ -15,4 +15,6 @@ class Site
 	field :ios_app_id, type: String 
 	field :email, type: String 
 	field :author, type: String 
+	field :phone, type: String
+	field :city_st_zip, type: String 
 end

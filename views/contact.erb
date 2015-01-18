@@ -1,0 +1,67 @@
+<main class="content-no-top">
+<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>
+						Contact
+					</h1>
+					
+					<div class="lead">
+						Success is no accident. It is hard work, <strong>perseverance</strong>, learning, sacrifice and most of all, 
+						<span class="colour"><strong>love</strong></span> of what you are doing or <span class="colour">learning</span> to do. 
+					</div>
+				</div>
+			</div>
+	
+		<!--MAP SECTION
+			<section id="google-map">
+				<div id="google-container"></div>
+					<div id="zoom-in"></div>
+					<div id="zoom-out"></div>
+			</section>
+		-->
+		
+		<div class="row pad45">
+			<div class="col-md-5">
+				<div class="lead2 pad5">
+					Do you need an app, have a question or comment?
+				</div>
+				
+				<p>
+					<%= @company %><br>
+					<%= @city_st_zip %><br>
+				</p>
+				
+				<p>
+					<span class="colour">E</span> - <a class="line" href="mailto:#"><%= @email %></a><br>
+					<span class="colour">P</span> - <%= @phone %>
+				</p>
+			</div>
+			
+			<div class="col-md-7">
+				<div class="contact_form">  
+					<div id="note"></div>
+						<div id="fields">
+							<form id="ajax-contact-form" action="/email" class="form-inline" method="POST">
+							<input class="col-xs-12 col-md-12" type="text" name="name" value="" placeholder="NAME" />
+
+							<input class="col-xs-12 col-md-12" type="text" name="email" value="" placeholder="EMAIL"/>
+
+							<input class="col-xs-12 col-md-12" type="text" name="subject" value="" placeholder="SUBJECT" />
+
+							<textarea name="message" id="message" class="col-xs-12  col-md-12" placeholder="MESSAGE"></textarea>
+
+							<div class="clear"></div>
+
+							<input type="submit" class="btn marg-right10" value="submit" />
+
+							<input type="reset" class="btn" value="reset" />
+
+							<div class="clear"></div>
+							</form>  
+						</div>
+					</div>  
+				</div>   
+			</div>
+				</div>
+				</main>
