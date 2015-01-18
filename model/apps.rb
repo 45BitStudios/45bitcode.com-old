@@ -17,6 +17,8 @@ class App
 	field :author, type: String 
 	field :icon, type: String 
 	field :version, type: String 
+	field :banner, type: String 
+	field :itunes, type: String 
 
 end
 
