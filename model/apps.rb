@@ -15,5 +15,16 @@ class App
 	field :ios_app_id, type: String 
 	field :email, type: String 
 	field :author, type: String 
+	field :icon, type: String 
+	field :version, type: String 
+
+end
+
+class Screenshot
+
+	include Mongoid::Document
+	include Mongoid::Timestamps
+	field :slug, type: String
+	field :img_url, type: String
 
 end

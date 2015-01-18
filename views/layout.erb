@@ -3,10 +3,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8" />
-<title>45 Bit Code</title>
+<title><%= @title %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="<%= @description %>">
+<meta name="author" content="<%= @author %>">
 
 <!-- Apple iOS bookmark icons -->
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -15,30 +15,31 @@
 <link rel="apple-touch-startup-image" href="/splash-startup.png">
 
 <!-- Apple smart banners -->
-<meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+<% if @show_app_banner == true %>
+	<meta name="apple-itunes-app" content="app-id=<%= @ios_app_id %>">
+<% end %>
 
 <!-- Open Graph -->
-<meta property="og:title" content="iAcquire’s awesome blog"/>
-<meta property="og:type" content="article"/>
-<meta property="og:image" content="http://www.iacquire.com/some-thumbnail.jpg"/>
-<meta property="og:url" content="http://blog.iacquire.com"/>
-<meta property="og:description" content="Stop hitting refresh on your ex-girlfriend’s Facebook page? You should check out the iAcquire blog and learn something instead"/>
-<meta property="fb:admins" content="USER_ID"/>
+<meta property="og:title" content="<%= @title %>"/>
+<meta property="og:type" content="<%= @type %>"/>
+<meta property="og:image" content="<%= @img_url %>"/>
+<meta property="og:url" content="<%= @url %>"/>
+<meta property="og:description" content="<%= @description %>"/>
+<meta property="fb:admins" content="<%= @fb_id %>"/>
 
 <!-- Twitter Cards -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@flickr" />
-<meta name="twitter:url" content="http://www.nytimes.com/2012/02/19/arts/music/amid-police-presence-fans-congregate-for-whitney-houstons-funeral-in-newark.html">
-<meta name="twitter:title" content="Parade of Fans for Houston’s Funeral">
-<meta name="twitter:image" content="http://farm8.staticflickr.com/7334/11858349453_e3f18e5881_z.jpg" />
-<meta name="twitter:description" content="NEWARK – The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.">
-<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+<meta name="twitter:card" content="<%= @tw_card_type %>">
+<meta name="twitter:site" content="<%= @tw_id %>" />
+<meta name="twitter:url" content="<%= @url %>">
+<meta name="twitter:title" content="<%= @title %>">
+<meta name="twitter:image" content="<%= @img_url %>" />
+<meta name="twitter:description" content="<%= @description %>">
 <meta name="twitter:app:country" content="US">
-<meta name="twitter:app:name:iphone" content="Cannonball">
-<meta name="twitter:app:id:iphone" content="929750075">
+<meta name="twitter:app:name:iphone" content="<%= @app_name %>">
+<meta name="twitter:app:id:iphone" content="<%= @ios_app_id %>">
 <meta name="twitter:app:url:iphone" content="cannonball://poem/5149e249222f9e600a7540ef">
-<meta name="twitter:app:name:ipad" content="Cannonball">
-<meta name="twitter:app:id:ipad" content="929750075">
+<meta name="twitter:app:name:ipad" content="<%= @app_name %>">
+<meta name="twitter:app:id:ipad" content="<%= @ios_app_id %>">
 <meta name="twitter:app:url:ipad" content="cannonball://poem/5149e249222f9e600a7540ef">
 
 <!--FONT-->
@@ -124,15 +125,15 @@
 						<div class="center footer-no-marg">
 							<div class="social-icons">
 								<span class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-									<a href="/blank"><i class="fa fa-twitter"></i></a>
+									<a href="<%= @twitter %>"><i class="fa fa-twitter"></i></a>
 								</span>
 											
 								<span class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="0.5s">
-									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="<%= @facebook %>"><i class="fa fa-facebook"></i></a>
 								</span>
 								
 								<span class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="1s">
-									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="<%= @instagram %>"><i class="fa fa-instagram"></i></a>
 								</span>
 							</div>
 									
@@ -144,10 +145,10 @@
 										document.write(d.getFullYear())
 									//]]>
 								</script>  
-								45 Bit Code
+								<%= @company %>
 							</div>
 							<p class="madeby">
-								made with <i class="fa fa-heart colour heart"></i> by <a href="http://vincedavis.com">Vince Davis</a>
+								made with <i class="fa fa-heart colour heart"></i> by <a href="<%= @author_link %>"><%= @author %></a>
 							</p>
 						</div>
 					<!--//END--> 
@@ -212,6 +213,19 @@
 		});
 	//]]> 
 </script>
-
+<!-- Gaug.es Script -->
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '54baf4078bfdf728140637e3');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
 </body>
 </html>
