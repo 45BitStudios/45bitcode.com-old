@@ -14,15 +14,15 @@ Mongoid.load!('mongoid.yml')
 
 def set_defaults
 
-	site = Site.first
+	site = Site.find('54bc278856696e176c000000')
 	
 	@facebook = site.facebook #'https://www.facebook.com/vince.davis'
 	@twitter = site.twitter #'http://www.twitter.com/vincedavis'
 	@instagram = site.instagram #'http://instagram.com/vinceinsanepaint'
 	@author = site.author #'Vince Davis'
 	@auther_link = site.author_link #'http://www.twitter.com/vincedavis'
-	@title = site.link #'45 Bit Code'
-	@company = site.comapny #'45 Bit Code'
+	@title = site.title #'45 Bit Code'
+	@company = site.company #'45 Bit Code'
 	@description = site.description #'Making great apps 1 bit at a time'
 	@show_app_banner = false
 	@url = site.url #'http://45bitcode.com'

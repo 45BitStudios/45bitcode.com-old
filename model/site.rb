@@ -12,7 +12,6 @@ class Site
 	field :facebook, type: String 
 	field :twitter, type: String 
 	field :instagram, type: String 
-	field :ios_app_id, type: String 
 	field :email, type: String 
 	field :author, type: String 
 	field :phone, type: String
@@ -22,6 +21,8 @@ class Site
 	field :img_url, type: String 
 	field :fb_admin, type: String 
 	field :favicon, type: String 
-	field :city_st_zip, type: String 
+	field :city_st_zip2, type: String 
+	field :url, type: String 
+	field :tw_id, type: String 
 	
 end
