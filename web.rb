@@ -15,9 +15,11 @@ Mongoid.load!('mongoid.yml')
 def set_defaults
 
 	site = Site.find('54bc278856696e176c000000')
+	@site = site
 	
 	@facebook = site.facebook #'https://www.facebook.com/vince.davis'
 	@twitter = site.twitter #'http://www.twitter.com/vincedavis'
+	@tumblr = site.tumblr
 	@instagram = site.instagram #'http://instagram.com/vinceinsanepaint'
 	@author = site.author #'Vince Davis'
 	@auther_link = site.author_link #'http://www.twitter.com/vincedavis'
@@ -68,13 +70,19 @@ get '/apps/:slug' do
 	app = App.where(slug: slug.downcase).first
 	
 	if app.nil?
+		@title = @site.title
+		@description = @site.description
+		@show_app_banner = false
+		@url = @site.url
+		@img_url = @site.img_url
+		@tw_card_type = 'summary'
 		status 404
 	else
-		@title = "45 Bit Code | #{app.name}"
+		@title = "#{@site.title} | #{app.name}"
 		@name = app.name
 		@description = app.description
 		@show_app_banner = true
-		@url = 'http://45bitcode.com'
+		@url = "#{@site.url}/apps/#{app.slug}"
 		@img_url = app.icon
 		@ios_app_id = app.ios_app_id
 		@tw_card_type = 'app'

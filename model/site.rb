@@ -24,5 +24,5 @@ class Site
 	field :city_st_zip2, type: String 
 	field :url, type: String 
 	field :tw_id, type: String 
-	
+	field :tumblr, type: String 
 end
