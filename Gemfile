@@ -12,4 +12,4 @@ gem 'awesome_print'
 gem 'mongoid'
 gem 'mongo'
 gem 'bson_ext'
-
+gem 'twilio-ruby'

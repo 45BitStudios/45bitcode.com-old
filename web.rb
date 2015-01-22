@@ -10,6 +10,8 @@ require './model/apps.rb'
 require './model/site.rb'
 require './env' if File.exists?('env.rb')
 
+require 'twilio-ruby'
+
 Mongoid.load!('mongoid.yml')
 
 def set_defaults
@@ -46,14 +48,10 @@ get '/?' do
 	erb :index
 end
 
-get '/blank?' do
+get '/privacy?' do
 	set_defaults
-	
-	app = App.new
-	app.name = params[:new]
-	app.save
-	
-  	erb :blank
+
+  	erb :privacy
 end
 
 get '/contact?' do
@@ -92,14 +90,37 @@ get '/apps/:slug' do
 		@itunes = app.itunes
 		@favicon = app.favicon
 	end
-	
-	erb :apps
+	redirect @itunes
+	#erb :apps
 end
 
 get '/thankyou' do
 	set_defaults
 	
 	erb :thankyou
+end
+
+get '/twilio' do
+  account_sid = 'ACcbc84cb48b6d6832f2ac247e59cafca4' 
+  auth_token = '8aeeba184b2dae0ba2d7d57c00181f9e' 
+ 
+# set up a client to talk to the Twilio REST API 
+@client = Twilio::REST::Client.new account_sid, auth_token 
+
+@call = @client.account.calls.create({
+	:to => '+18472128597', 
+	:from => '+12249006281', 
+	:url => 'http://45bitcode.com',  
+	:method => 'GET',  
+	:fallback_method => 'GET',  
+	:status_callback_method => 'GET',    
+	:record => 'false'
+})
+
+end
+
+get '/call' do
+puts "calling me"
 end
 
 #Clicking on submit for Email
