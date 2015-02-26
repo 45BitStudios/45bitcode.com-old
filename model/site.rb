@@ -6,6 +6,7 @@ class Site
 
 	include Mongoid::Document
 	include Mongoid::Timestamps
+	field :host_name, type: String
 	field :name, type: String
 	field :title, type: String
 	field :description, type: String 
