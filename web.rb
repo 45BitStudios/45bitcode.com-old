@@ -107,7 +107,12 @@ get '/thankyou?' do
   erb :'shared/thankyou', :layout => :'shared/layout'
 end
 
-
+not_found do
+  set_site
+  status 404
+  #erb @oops, :layout => @layout
+  erb :'shared/oops', :layout => :'shared/layout'
+end
 ## End of Generic Pages ##
 
 ## Stripe Charge Pages ##
@@ -139,7 +144,7 @@ end
 ## API Logic ##
 
 # Mastercard API #
-get '/api/mc/v1?' do
+get '/api/mc/v1/?' do
 	content_type :json
 
   # test URL http://localhost:4567/api/mc/v1/?length=1&offset=0&lat=41.8500300&lon=-87.6500500&radius=25&unit=miles&prod=y&uuid=fdsfsd&type=test
@@ -578,12 +583,3 @@ post '/v1/log' do
   status 200
 
 end
-
-not_found do
-  set_site
-  status 404
-  #erb @oops, :layout => @layout
-  erb :'shared/oops', :layout => :'shared/layout'
-end
-
-
