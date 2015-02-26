@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10f7be34-ae2f-4607-bbde-f746bd92ff92" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/apps.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/blank.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/contact.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/layout.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/oops.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/privacy.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/thankyou.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env.rb" afterPath="$PROJECT_DIR$/env.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/site.rb" afterPath="$PROJECT_DIR$/model/site.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.rb" afterPath="$PROJECT_DIR$/web.rb" />
     </list>
     <ignored path="45bitcode.com.iws" />
@@ -42,8 +30,8 @@
       <file leaf-file-name="web.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.71005917" vertical-offset="1575" max-vertical-offset="8880">
-              <caret line="89" column="3" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.9112426" vertical-offset="8482" max-vertical-offset="8925">
+              <caret line="586" column="3" selection-start-line="586" selection-start-column="3" selection-end-line="586" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -178,10 +166,6 @@
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="45bitcode.com">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -322,8 +306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.71005917" vertical-offset="1575" max-vertical-offset="8880">
-          <caret line="89" column="3" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.9112426" vertical-offset="8482" max-vertical-offset="8925">
+          <caret line="586" column="3" selection-start-line="586" selection-start-column="3" selection-end-line="586" selection-end-column="3" />
           <folding />
         </state>
       </provider>

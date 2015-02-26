@@ -107,12 +107,7 @@ get '/thankyou?' do
   erb :'shared/thankyou', :layout => :'shared/layout'
 end
 
-not_found do
-	set_site
-	status 404
-	#erb @oops, :layout => @layout
-  erb :'shared/oops', :layout => :'shared/layout'
-end
+
 ## End of Generic Pages ##
 
 ## Stripe Charge Pages ##
@@ -148,6 +143,7 @@ get '/api/mc/v1?' do
 	content_type :json
 
   # test URL http://localhost:4567/api/mc/v1/?length=1&offset=0&lat=41.8500300&lon=-87.6500500&radius=25&unit=miles&prod=y&uuid=fdsfsd&type=test
+  # Prod URL http://45bitcode.com/api/mc/v1/?length=1&offset=0&lat=41.8500300&lon=-87.6500500&radius=25&unit=miles&prod=y&uuid=fdsfsd&type=test
 
   lat = params[:lat]
 	lon = params[:lon]
@@ -160,7 +156,7 @@ get '/api/mc/v1?' do
 	type = params[:type]
 
 	#Google Analytics PageView
-  Gabba::Gabba.new('UA-58678060-3', '45bitcode.com').page_view('Mobile Pay Finder', 'api/mc')
+  Gabba::Gabba.new('UA-58678060-3', '45bitcode.com').page_view('Mobile Pay Finder', 'api/mc/v1')
     
   #Google Analytics Events
 	Gabba::Gabba.new('UA-58678060-3', '45bitcode.com').event('API', 'GET', 'User', uuid, true)
@@ -580,7 +576,14 @@ post '/v1/log' do
   #  end
   #end
   status 200
-    
+
+end
+
+not_found do
+  set_site
+  status 404
+  #erb @oops, :layout => @layout
+  erb :'shared/oops', :layout => :'shared/layout'
 end
 
 
